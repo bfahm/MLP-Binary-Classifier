@@ -3,8 +3,10 @@
 ### Project Dependencies:
 
 - Python 3.7
-- Pandas
-- SKLearn
+- Pandas 0.24.2 
+- SKLearn 0.21.1
+- SciPy: 1.3.0
+- Numpy: 1.16.3
 
 *Given a training data of about 3900 examples (training and validation), it is required to clean the data, and create a model that classifies the validation data correctly.*
 
