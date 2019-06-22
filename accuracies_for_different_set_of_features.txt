@@ -1,0 +1,77 @@
+variable `needed = 20`
+
+Accuracy is:  0.8429319371727748
+['variable6_m', 'variable8_x', 'variable6_c', 'variable10_f', 'variable9_f', 'variable2_x', 'variable7_o', 'variable2_y', 'variable14', 'variable5_g', 'variable6_ff', 'variable4_u', 'variable6_i', 'variable12_t', 'variable4_l', 'variable6_q']
+
+Accuracy is:  0.8115183246073299
+['variable12_t', 'variable2_y', 'variable7_v', 'variable7_ff', 'variable4_l', 'variable6_q', 'variable6_x', 'variable6_m', 'variable6_cc', 'variable5_g', 'variable9_f', 'variable13_g', 'variable6_ff', 'variable17', 'variable5_p', 'variable10_t']
+
+Accuracy is:  0.8429319371727748
+['variable10_t', 'variable8_x', 'variable6_x', 'variable6_d', 'variable7_h', 'variable7_bb', 'variable5_gg', 'variable4_u', 'variable7_v', 'variable4_l', 'variable14', 'variable6_c', 'variable6_m', 'variable2_x', 'variable12_f', 'variable3_y', 'variable9_t']
+
+Accuracy is:  0.8481675392670157
+['variable7_ff', 'variable9_f', 'variable5_p', 'variable12_t', 'variable6_cc', 'variable9_t', 'variable2_x', 'variable10_t', 'variable4_y', 'variable7_bb', 'variable7_n', 'variable6_e', 'variable13_p', 'variable6_m', 'variable7_dd', 'variable15', 'variable7_z']
+
+Accuracy is:  0.7382198952879581
+['variable6_e', 'variable12_f', 'variable8_y', 'variable9_t', 'variable6_j', 'variable15', 'variable3_x', 'variable9_f', 'variable6_k', 'variable7_h', 'variable6_m', 'variable6_c', 'variable7_ff', 'variable10_f', 'variable2_y', 'variable8_x', 'variable1_a']
+
+Accuracy is:  0.7329842931937173
+['variable7_n', 'variable1_b', 'variable6_j', 'variable7_o', 'variable6_ff', 'variable6_i', 'variable8_y', 'variable7_dd', 'variable9_t', 'variable7_v', 'variable5_gg', 'variable5_p', 'variable6_W', 'variable7_ff', 'variable13_s']
+
+================================================================
+
+variable `needed = 30`
+
+Accuracy is:  0.774869109947644
+['variable13_g', 'variable3_x', 'variable6_aa', 'variable1_b', 'variable4_y', 'variable7_o', 'variable13_s', 'variable7_bb', 'variable13_p', 'variable6_k', 'variable10_t', 'variable6_r', 'variable8_x', 'variable6_i', 'variable9_f', 'variable5_gg', 'variable12_t', 'variable17', 'variable11', 'variable7_v', 'variable15', 'variable14']
+
+Accuracy is:  0.8324607329842932
+['variable9_t', 'variable13_s', 'variable5_gg', 'variable6_q', 'variable6_ff', 'variable5_g', 'variable7_v', 'variable6_aa', 'variable17', 'variable7_z', 'variable11', 'variable6_W', 'variable7_ff', 'variable6_r', 'variable3_y', 'variable15', 'variable12_f', 'variable9_f', 'variable2_y', 'variable1_b', 'variable13_g', 'variable5_p', 'variable6_c', 'variable12_t', 'variable7_h']
+
+Accuracy is:  0.8691099476439791
+['variable6_m', 'variable7_h', 'variable3_y', 'variable9_t', 'variable12_f', 'variable6_e', 'variable6_i', 'variable1_a', 'variable2_y', 'variable15', 'variable13_g', 'variable6_d', 'variable17', 'variable11', 'variable7_n', 'variable6_c', 'variable13_s', 'variable7_o', 'variable7_v', 'variable6_cc', 'variable4_u', 'variable8_y', 'variable10_t', 'variable5_p', 'variable9_f', 'variable6_q']
+
+Accuracy is:  0.8272251308900523
+['variable4_l', 'variable9_t', 'variable2_y', 'variable6_x', 'variable6_m', 'variable6_q', 'variable6_cc', 'variable17', 'variable1_b', 'variable6_d', 'variable5_g', 'variable1_a', 'variable2_x', 'variable13_p', 'variable3_x', 'variable3_y', 'variable6_c', 'variable7_h', 'variable14', 'variable7_bb', 'variable7_o', 'variable7_z', 'variable15', 'variable9_f']
+
+Accuracy is:  0.8586387434554974
+['variable6_m', 'variable14', 'variable9_t', 'variable8_x', 'variable11', 'variable7_h', 'variable7_bb', 'variable7_v', 'variable12_f', 'variable6_aa', 'variable6_k', 'variable7_dd', 'variable7_o', 'variable7_n', 'variable6_r', 'variable4_y', 'variable4_l', 'variable8_y', 'variable7_z', 'variable6_x']
+
+=================================================================
+
+variable `needed = 40`
+
+Accuracy is:  0.7120418848167539
+['variable5_gg', 'variable8_y', 'variable13_s', 'variable14', 'variable7_dd', 'variable10_f', 'variable7_o', 'variable7_n', 'variable2_y', 'variable6_aa', 'variable12_t', 'variable6_j', 'variable13_g', 'variable3_y', 'variable7_bb', 'variable10_t', 'variable7_j', 'variable6_d', 'variable6_ff', 'variable6_q', 'variable6_i', 'variable6_x', 'variable17', 'variable6_m', 'variable6_e', 'variable7_v', 'variable8_x', 'variable9_f', 'variable13_p', 'variable6_W']
+
+Accuracy is:  0.8272251308900523
+['variable7_z', 'variable6_cc', 'variable6_r', 'variable6_j', 'variable15', 'variable6_q', 'variable7_bb', 'variable4_u', 'variable3_y', 'variable5_gg', 'variable11', 'variable3_x', 'variable6_ff', 'variable10_f', 'variable1_b', 'variable7_h', 'variable7_dd', 'variable2_y', 'variable6_k', 'variable9_t', 'variable6_i', 'variable7_j', 'variable10_t', 'variable6_c', 'variable6_W', 'variable5_g', 'variable6_d', 'variable2_x']
+
+Accuracy is:  0.8115183246073299
+['variable2_y', 'variable10_t', 'variable13_p', 'variable5_g', 'variable6_q', 'variable6_x', 'variable9_f', 'variable10_f', 'variable7_j', 'variable8_y', 'variable8_x', 'variable3_y', 'variable6_c', 'variable4_u', 'variable6_ff', 'variable6_j', 'variable7_n', 'variable7_bb', 'variable6_d', 'variable3_x', 'variable12_t', 'variable6_m', 'variable7_h', 'variable4_y', 'variable6_W', 'variable17', 'variable1_a', 'variable6_aa']
+
+Accuracy is:  0.8534031413612565
+['variable7_o', 'variable7_h', 'variable15', 'variable6_aa', 'variable7_v', 'variable6_c', 'variable4_l', 'variable14', 'variable2_x', 'variable3_x', 'variable7_dd', 'variable7_n', 'variable8_x', 'variable17', 'variable1_b', 'variable9_f', 'variable6_j', 'variable13_p', 'variable6_x', 'variable6_cc', 'variable8_y', 'variable13_g', 'variable5_gg', 'variable6_r', 'variable6_q', 'variable5_p', 'variable11', 'variable2_y']
+
+Accuracy is:  0.806282722513089
+['variable6_c', 'variable17', 'variable13_s', 'variable5_gg', 'variable6_d', 'variable6_W', 'variable7_dd', 'variable1_a', 'variable6_ff', 'variable11', 'variable7_h', 'variable6_aa', 'variable5_g', 'variable6_cc', 'variable10_f', 'variable7_o', 'variable4_l', 'variable1_b', 'variable6_j', 'variable15', 'variable14', 'variable7_ff', 'variable3_x', 'variable13_g', 'variable6_r', 'variable9_t', 'variable8_x', 'variable6_q']
+
+===============================================================
+
+variable `needed = 50`
+
+Accuracy is:  0.7696335078534031
+['variable7_dd', 'variable6_W', 'variable5_g', 'variable7_bb', 'variable6_d', 'variable8_x', 'variable4_l', 'variable7_ff', 'variable2_y', 'variable17', 'variable7_o', 'variable7_n', 'variable3_x', 'variable7_z', 'variable5_p', 'variable6_x', 'variable5_gg', 'variable6_ff', 'variable9_t', 'variable13_p', 'variable1_b', 'variable7_j', 'variable1_a', 'variable8_y', 'variable15', 'variable4_u', 'variable13_s', 'variable13_g', 'variable9_f', 'variable7_v', 'variable6_e', 'variable14']
+
+Accuracy is:  0.8534031413612565
+['variable10_f', 'variable6_q', 'variable6_cc', 'variable6_e', 'variable15', 'variable10_t', 'variable4_l', 'variable9_f', 'variable13_g', 'variable2_y', 'variable1_a', 'variable17', 'variable6_m', 'variable6_c', 'variable6_r', 'variable4_u', 'variable6_aa', 'variable3_x', 'variable13_p', 'variable6_i', 'variable6_W', 'variable7_h', 'variable6_k', 'variable3_y', 'variable7_dd', 'variable13_s', 'variable11', 'variable12_f', 'variable12_t', 'variable7_z', 'variable14', 'variable9_t']
+
+Accuracy is:  0.8272251308900523
+['variable3_y', 'variable15', 'variable7_n', 'variable10_t', 'variable4_l', 'variable5_p', 'variable7_v', 'variable14', 'variable4_y', 'variable6_k', 'variable8_y', 'variable5_g', 'variable7_ff', 'variable13_p', 'variable7_h', 'variable6_W', 'variable10_f', 'variable5_gg', 'variable9_t', 'variable6_m', 'variable6_d', 'variable4_u', 'variable2_y', 'variable7_bb', 'variable13_s', 'variable7_dd', 'variable6_aa', 'variable3_x']
+
+Accuracy is:  0.8691099476439791
+['variable6_d', 'variable14', 'variable7_bb', 'variable4_u', 'variable6_ff', 'variable10_f', 'variable13_g', 'variable11', 'variable6_i', 'variable6_m', 'variable2_x', 'variable9_t', 'variable7_z', 'variable9_f', 'variable7_ff', 'variable6_x', 'variable3_x', 'variable6_c', 'variable1_a', 'variable7_n', 'variable5_g', 'variable12_f', 'variable3_y', 'variable4_y', 'variable7_dd', 'variable1_b', 'variable7_h', 'variable6_cc', 'variable6_j', 'variable7_j']
+
+Accuracy is:  0.837696335078534
+['variable6_d', 'variable5_p', 'variable12_t', 'variable13_s', 'variable13_g', 'variable15', 'variable6_c', 'variable7_ff', 'variable6_x', 'variable10_f', 'variable6_r', 'variable7_v', 'variable13_p', 'variable6_i', 'variable6_cc', 'variable6_W', 'variable6_k', 'variable6_aa', 'variable9_f', 'variable4_l', 'variable7_dd', 'variable2_y', 'variable5_g', 'variable6_j', 'variable7_h', 'variable11', 'variable14', 'variable9_t', 'variable2_x', 'variable8_x', 'variable8_y', 'variable1_b', 'variable7_o', 'variable6_m', 'variable6_e', 'variable3_x']
+
