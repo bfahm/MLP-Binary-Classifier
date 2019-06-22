@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d161fbff-e73b-4721-a7b5-dd2816764da1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,12 +16,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="48" column="24" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="24" />
+            <state relative-caret-position="143">
+              <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
               <folding>
                 <element signature="e#17#27#0" expanded="true" />
                 <element signature="e#658#958#0" />
                 <element signature="e#996#3030#0" />
+                <element signature="e#1657#3096#0" />
+                <element signature="e#2164#4002#0" />
+                <element signature="e#3981#4451#0" />
+                <element signature="e#4497#4801#0" />
+                <element signature="e#4900#5772#0" />
               </folding>
             </state>
           </provider>
@@ -40,11 +46,17 @@
       <find>;</find>
       <find>,</find>
       <find>dataset</find>
+      <find>'</find>
+      <find>i</find>
+      <find>each</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
       <replace>,</replace>
       <replace>df</replace>
+      <replace>'variable1'</replace>
+      <replace>pandas</replace>
+      <replace>i</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -146,6 +158,14 @@
       <option name="presentableId" value="Default" />
       <updated>1561090399942</updated>
     </task>
+    <task id="LOCAL-00001" summary="added normalization method">
+      <created>1561211428740</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1561211428740</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -165,13 +185,13 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41867045" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41867045" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32956153" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32956153" />
@@ -180,18 +200,27 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added normalization method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added normalization method" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/training.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="48" column="24" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="24" />
+        <state relative-caret-position="143">
+          <caret line="149" column="18" selection-start-line="149" selection-start-column="18" selection-end-line="149" selection-end-column="18" />
           <folding>
             <element signature="e#17#27#0" expanded="true" />
             <element signature="e#658#958#0" />
             <element signature="e#996#3030#0" />
+            <element signature="e#1657#3096#0" />
+            <element signature="e#2164#4002#0" />
+            <element signature="e#3981#4451#0" />
+            <element signature="e#4497#4801#0" />
+            <element signature="e#4900#5772#0" />
           </folding>
         </state>
       </provider>

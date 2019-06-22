@@ -115,16 +115,39 @@ def normalize_dataframe(df, type='mean'):
         return df
 
 
+def one_hot_encode(df):
+    cols_to_one_hot = ['variable1', 'variable4', 'variable5', 'variable6', 'variable7', 'variable9', 'variable10', 'variable12', 'variable13']
+    for i in cols_to_one_hot:
+        dummies = pandas.get_dummies(df[i], prefix=i, drop_first=False)
+        df = pandas.concat([df, dummies], axis=1)
+        df = df.drop([i], axis=1)
+
+    df['classLabel'] = df['classLabel'].map({'yes.': 1, 'no.': 0})
+
+    # Rearrange columns
+    col = ['variable2_x', 'variable2_y', 'variable3_x', 'variable3_y',
+       'variable8_x', 'variable8_y', 'variable11', 'variable14', 'variable15',
+       'variable17', 'variable19', 'variable1_a', 'variable1_b',
+       'variable4_l', 'variable4_u', 'variable4_y', 'variable5_g',
+       'variable5_gg', 'variable5_p', 'variable6_W', 'variable6_aa',
+       'variable6_c', 'variable6_cc', 'variable6_d', 'variable6_e',
+       'variable6_ff', 'variable6_i', 'variable6_j', 'variable6_k',
+       'variable6_m', 'variable6_q', 'variable6_r', 'variable6_x',
+       'variable7_bb', 'variable7_dd', 'variable7_ff', 'variable7_h',
+       'variable7_j', 'variable7_n', 'variable7_o', 'variable7_v',
+       'variable7_z', 'variable9_f', 'variable9_t', 'variable10_f',
+       'variable10_t', 'variable12_f', 'variable12_t', 'variable13_g',
+       'variable13_p', 'variable13_s', 'classLabel']
+    df = df[col]
+    return df
+
+
 dataset = load_dataset()
 dataset = clean_dataframe(dataset)
 dataset = normalize_dataframe(dataset, 'mean')
+dataset = one_hot_encode(dataset)
 
 # Display the Data
-print(dataset.dtypes)
 pandas.set_option('display.expand_frame_repr', False)
 view_dataframe(dataset, 1)
-
-# print(dataset['variable4'].unique())
-# print(dataset['variable2.x'].value_counts())
-# print(dataset.count())
 
