@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d161fbff-e73b-4721-a7b5-dd2816764da1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,40 +13,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-208">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="2640">
+              <caret line="158" column="55" lean-forward="true" selection-start-line="158" selection-start-column="2" selection-end-line="158" selection-end-column="55" />
               <folding>
                 <element signature="e#17#27#0" expanded="true" />
                 <element signature="e#658#958#0" />
-                <element signature="e#985#1290#0" />
                 <element signature="e#1090#1578#0" />
                 <element signature="e#1657#3096#0" />
-                <element signature="e#2164#4002#0" />
                 <element signature="e#3981#4451#0" />
-                <element signature="e#4497#4801#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/validation.csv">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1386">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#616#803#0" />
+                <element signature="e#856#1070#0" />
+                <element signature="e#1378#2236#0" />
+                <element signature="e#1412#1551#0" />
+                <element signature="e#3029#3230#0" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -68,6 +64,8 @@
       <find>i</find>
       <find>each</find>
       <find>drop</find>
+      <find>scoring</find>
+      <find>pop</find>
     </findStrings>
     <replaceStrings>
       <replace>,</replace>
@@ -233,7 +231,21 @@
       <option name="project" value="LOCAL" />
       <updated>1561214253649</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="code cleaning">
+      <created>1561214315817</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1561214315817</updated>
+    </task>
+    <task id="LOCAL-00006" summary="done">
+      <created>1561221909743</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1561221909743</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -273,7 +285,9 @@
     <MESSAGE value="added one hot encoding method" />
     <MESSAGE value="fixed a bug in arranging columns" />
     <MESSAGE value="distribute trains and tests, xs and ys" />
-    <option name="LAST_COMMIT_MESSAGE" value="distribute trains and tests, xs and ys" />
+    <MESSAGE value="code cleaning" />
+    <MESSAGE value="done" />
+    <option name="LAST_COMMIT_MESSAGE" value="done" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/training.csv">
@@ -282,29 +296,31 @@
     <entry file="file://$PROJECT_DIR$/validation.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-208">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="1386">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
           <folding>
-            <element signature="e#17#27#0" expanded="true" />
-            <element signature="e#658#958#0" />
-            <element signature="e#985#1290#0" />
-            <element signature="e#1090#1578#0" />
-            <element signature="e#1657#3096#0" />
-            <element signature="e#2164#4002#0" />
-            <element signature="e#3981#4451#0" />
-            <element signature="e#4497#4801#0" />
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#616#803#0" />
+            <element signature="e#856#1070#0" />
+            <element signature="e#1378#2236#0" />
+            <element signature="e#1412#1551#0" />
+            <element signature="e#3029#3230#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="2640">
+          <caret line="158" column="55" lean-forward="true" selection-start-line="158" selection-start-column="2" selection-end-line="158" selection-end-column="55" />
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#17#27#0" expanded="true" />
+            <element signature="e#658#958#0" />
+            <element signature="e#1090#1578#0" />
+            <element signature="e#1657#3096#0" />
+            <element signature="e#3981#4451#0" />
           </folding>
         </state>
       </provider>
