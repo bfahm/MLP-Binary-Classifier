@@ -90,6 +90,11 @@ def clean_dataframe(df):
     df['variable8_y'] = df.variable8_y.astype(float)
     df['variable8_y'] = df['variable8_y'].fillna((df['variable8_y'].mean()))
 
+    col_fix_dtype = ['variable2_x', 'variable2_y', 'variable3_x', 'variable3_y', 'variable8_x', 'variable8_y', 'variable11', 'variable14', 'variable15', 'variable17', 'variable19']
+
+    for i in col_fix_dtype:
+        df[i] = df[i].astype(float)
+
     # Count NANs in each column
     # count_nan = len(df) - df.count()
     # print(count_nan)
@@ -97,10 +102,25 @@ def clean_dataframe(df):
     return df
 
 
+def normalize_dataframe(df, type='mean'):
+    col_to_normalize = ['variable2_x', 'variable2_y', 'variable3_x', 'variable3_y', 'variable8_x', 'variable8_y',
+                     'variable11', 'variable14', 'variable15', 'variable17', 'variable19']
+    if type == 'mean':
+        for i in col_to_normalize:
+            df[i] = (df[i] - df[i].mean()) / df[i].std()
+        return df
+    elif type == 'minmax':
+        for i in col_to_normalize:
+            df[i] = (df[i] - df[i].min()) / (df[i].max() - df[i].min())
+        return df
+
+
 dataset = load_dataset()
 dataset = clean_dataframe(dataset)
+dataset = normalize_dataframe(dataset, 'mean')
 
 # Display the Data
+print(dataset.dtypes)
 pandas.set_option('display.expand_frame_repr', False)
 view_dataframe(dataset, 1)
 
