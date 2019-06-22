@@ -9,6 +9,9 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
+seed = 7  # Retrieve the same results every run
+scoring = 'accuracy'  # Test model score by accuracy (in %percentage)
+
 train_x, train_y, test_x, test_y = load_dataset()
 
 print(train_x)

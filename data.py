@@ -7,11 +7,6 @@ import sklearn
 import pandas
 
 
-
-seed = 7  # Retrieve the same results every run
-scoring = 'accuracy'  # Test model score by accuracy (in %percentage)
-
-
 # Check the versions of libraries
 def check_versions():
     print('Python: {}'.format(sys.version))
