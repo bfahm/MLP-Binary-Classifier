@@ -61,47 +61,48 @@ def view_dataset(dataset, to_print=1):
         print("Shape = ", dataset.shape)
 
 
+def clean_dataset(dataset):
+    # Drop NAs from variables of binary values
+    dataset = dataset.dropna(subset=['variable1', 'variable4', 'variable5', 'variable6', 'variable7'])
+
+    # Drop NAs from variables with low number of NAs
+    dataset = dataset.dropna(subset=['variable2', 'variable14', 'variable17'])
+
+    # Split Columns with comma (,) in its data
+    dataset['variable2_x'], dataset['variable2_y'] = dataset['variable2'].str.split(',', 1).str
+    dataset['variable3_x'], dataset['variable3_y'] = dataset['variable3'].str.split(',', 1).str
+    dataset['variable8_x'], dataset['variable8_y'] = dataset['variable8'].str.split(',', 1).str
+
+    # Removed Column: Variable18 which had a lot of NANs (2000+)
+    # Rearrange columns after modifications
+    cols = ['variable1', 'variable2_x', 'variable2_y', 'variable3_x', 'variable3_y', 'variable4', 'variable5',
+            'variable6', 'variable7', 'variable8_x', 'variable8_y', 'variable9', 'variable10', 'variable11',
+            'variable12', 'variable13', 'variable14', 'variable15', 'variable17', 'variable19', 'classLabel']
+    dataset = dataset[cols]
+
+    # Remove NAs from columns with # of NAs of 100+
+    dataset['variable2_y'] = dataset.variable2_y.astype(float)
+    dataset['variable2_y'] = dataset['variable2_y'].fillna((dataset['variable2_y'].mean()))
+
+    dataset['variable3_y'] = dataset.variable3_y.astype(float)
+    dataset['variable3_y'] = dataset['variable3_y'].fillna((dataset['variable3_y'].mean()))
+
+    dataset['variable8_y'] = dataset.variable8_y.astype(float)
+    dataset['variable8_y'] = dataset['variable8_y'].fillna((dataset['variable8_y'].mean()))
+
+    # Count NANs in each column
+    # count_nan = len(dataset) - dataset.count()
+    # print(count_nan)
+
+    return dataset
+
+
 dataset = load_dataset()
-
-
-# Drop NAs from variables of binary values
-dataset = dataset.dropna(subset=['variable1', 'variable4', 'variable5', 'variable6', 'variable7'])
-
-# Drop NAs from variables with low number of NAs
-dataset = dataset.dropna(subset=['variable2', 'variable14', 'variable17'])
-
-
-# Split Columns with comma (,) in its data
-dataset['variable2_x'], dataset['variable2_y'] = dataset['variable2'].str.split(',', 1).str
-dataset['variable3_x'], dataset['variable3_y'] = dataset['variable3'].str.split(',', 1).str
-dataset['variable8_x'], dataset['variable8_y'] = dataset['variable8'].str.split(',', 1).str
-
-
-# Removed Column: Variable18 which had a lot of NANs (2000+)
-# Rearrange columns after modifications
-cols = ['variable1', 'variable2_x', 'variable2_y', 'variable3_x', 'variable3_y', 'variable4', 'variable5', 'variable6', 'variable7', 'variable8_x', 'variable8_y', 'variable9', 'variable10', 'variable11', 'variable12', 'variable13', 'variable14', 'variable15', 'variable17', 'variable19', 'classLabel']
-dataset = dataset[cols]
-
-
-# Remove NAs from columns with # of NAs of 100+
-dataset['variable2_y'] = dataset.variable2_y.astype(float)
-dataset['variable2_y'] = dataset['variable2_y'].fillna((dataset['variable2_y'].mean()))
-
-dataset['variable3_y'] = dataset.variable3_y.astype(float)
-dataset['variable3_y'] = dataset['variable3_y'].fillna((dataset['variable3_y'].mean()))
-
-dataset['variable8_y'] = dataset.variable8_y.astype(float)
-dataset['variable8_y'] = dataset['variable8_y'].fillna((dataset['variable8_y'].mean()))
-
-
-# Count NANs in each column
-count_nan = len(dataset) - dataset.count()
-print(count_nan)
+dataset = clean_dataset(dataset)
 
 # Display the Data
 pandas.set_option('display.expand_frame_repr', False)
 view_dataset(dataset, 1)
-
 
 # print(dataset['variable4'].unique())
 # print(dataset['variable2.x'].value_counts())
