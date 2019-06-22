@@ -22,11 +22,17 @@ def load_dataset():
     url_test = "validation.csv"
 
     train = load(url_train)
+    train = train.sample(frac=1).reset_index(drop=True)
+
     train_x = train.drop(['classLabel'], axis=1)
+    train_x = fix_encode_test(train_x, 'train')
     train_y = train['classLabel']
 
     test = load(url_test)
+    test = test.sample(frac=1).reset_index(drop=True)
+
     test_x = test.drop(['classLabel'], axis=1)
+    test_x = fix_encode_test(test_x, 'test')
     test_y = test['classLabel']
 
     return train_x, train_y, test_x, test_y
@@ -127,6 +133,22 @@ def one_hot_encode(df):
     df['classLabel'] = df.pop('classLabel')
     return df
 
+
+def fix_encode_test(df, distrib):
+    if distrib == 'test':
+        df['variable4_l'] = 0
+        df['variable5_gg'] = 0
+        df['variable6_r'] = 0
+        df['variable7_o'] = 0
+        df['variable13_p'] = 0
+    elif distrib == 'train':
+        df['variable4_l'] = df.pop('variable4_l')
+        df['variable5_gg'] = df.pop('variable5_gg')
+        df['variable6_r'] = df.pop('variable6_r')
+        df['variable7_o'] = df.pop('variable7_o')
+        df['variable13_p'] = df.pop('variable13_p')
+
+    return df
 
 # dataset = load_dataset()
 # dataset = clean_dataframe(dataset)
