@@ -41,7 +41,7 @@ def load_dataset():
 
     url = "training.csv"
     names = ["variable1", "variable2", "variable3", "variable4", "variable5", "variable6", "variable7", "variable8", "variable9", "variable10", "variable11", "variable12", "variable13", "variable14", "variable15", "variable17", "variable18", "variable19", "classLabel"]
-    dataset = pandas.read_csv(url, names=names, sep = ";")
+    dataset = pandas.read_csv(url, names=names, sep=";")
 
     return dataset
 
@@ -125,20 +125,7 @@ def one_hot_encode(df):
     df['classLabel'] = df['classLabel'].map({'yes.': 1, 'no.': 0})
 
     # Rearrange columns
-    col = ['variable2_x', 'variable2_y', 'variable3_x', 'variable3_y',
-       'variable8_x', 'variable8_y', 'variable11', 'variable14', 'variable15',
-       'variable17', 'variable19', 'variable1_a', 'variable1_b',
-       'variable4_l', 'variable4_u', 'variable4_y', 'variable5_g',
-       'variable5_gg', 'variable5_p', 'variable6_W', 'variable6_aa',
-       'variable6_c', 'variable6_cc', 'variable6_d', 'variable6_e',
-       'variable6_ff', 'variable6_i', 'variable6_j', 'variable6_k',
-       'variable6_m', 'variable6_q', 'variable6_r', 'variable6_x',
-       'variable7_bb', 'variable7_dd', 'variable7_ff', 'variable7_h',
-       'variable7_j', 'variable7_n', 'variable7_o', 'variable7_v',
-       'variable7_z', 'variable9_f', 'variable9_t', 'variable10_f',
-       'variable10_t', 'variable12_f', 'variable12_t', 'variable13_g',
-       'variable13_p', 'variable13_s', 'classLabel']
-    df = df[col]
+    df['classLabel'] = df.pop('classLabel')
     return df
 
 
