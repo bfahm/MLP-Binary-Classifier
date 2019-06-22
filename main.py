@@ -46,63 +46,63 @@ def load_dataset():
     return dataset
 
 
-def view_dataset(dataset, to_print=1):
+def view_dataframe(df, to_print=1):
     if to_print == 0:  # Print the set as is.
-        print(dataset.values)
+        print(df.values)
     elif to_print == 1:  # Default print way
-        print(dataset)
+        print(df)
     elif to_print == 2:  # Peek at the first 20 elements
-        print(dataset.head(20))
-    elif to_print == 3:  # Print some info of the dataset
-        print(dataset.describe())
+        print(df.head(20))
+    elif to_print == 3:  # Print some info of the df
+        print(df.describe())
     elif to_print == 4:
-        print(dataset.groupby('classLabel').count())
+        print(df.groupby('classLabel').count())
     elif to_print == 5:  # just print the shape.
-        print("Shape = ", dataset.shape)
+        print("Shape = ", df.shape)
 
 
-def clean_dataset(dataset):
+def clean_dataframe(df):
     # Drop NAs from variables of binary values
-    dataset = dataset.dropna(subset=['variable1', 'variable4', 'variable5', 'variable6', 'variable7'])
+    df = df.dropna(subset=['variable1', 'variable4', 'variable5', 'variable6', 'variable7'])
 
     # Drop NAs from variables with low number of NAs
-    dataset = dataset.dropna(subset=['variable2', 'variable14', 'variable17'])
+    df = df.dropna(subset=['variable2', 'variable14', 'variable17'])
 
     # Split Columns with comma (,) in its data
-    dataset['variable2_x'], dataset['variable2_y'] = dataset['variable2'].str.split(',', 1).str
-    dataset['variable3_x'], dataset['variable3_y'] = dataset['variable3'].str.split(',', 1).str
-    dataset['variable8_x'], dataset['variable8_y'] = dataset['variable8'].str.split(',', 1).str
+    df['variable2_x'], df['variable2_y'] = df['variable2'].str.split(',', 1).str
+    df['variable3_x'], df['variable3_y'] = df['variable3'].str.split(',', 1).str
+    df['variable8_x'], df['variable8_y'] = df['variable8'].str.split(',', 1).str
 
     # Removed Column: Variable18 which had a lot of NANs (2000+)
     # Rearrange columns after modifications
     cols = ['variable1', 'variable2_x', 'variable2_y', 'variable3_x', 'variable3_y', 'variable4', 'variable5',
             'variable6', 'variable7', 'variable8_x', 'variable8_y', 'variable9', 'variable10', 'variable11',
             'variable12', 'variable13', 'variable14', 'variable15', 'variable17', 'variable19', 'classLabel']
-    dataset = dataset[cols]
+    df = df[cols]
 
     # Remove NAs from columns with # of NAs of 100+
-    dataset['variable2_y'] = dataset.variable2_y.astype(float)
-    dataset['variable2_y'] = dataset['variable2_y'].fillna((dataset['variable2_y'].mean()))
+    df['variable2_y'] = df.variable2_y.astype(float)
+    df['variable2_y'] = df['variable2_y'].fillna((df['variable2_y'].mean()))
 
-    dataset['variable3_y'] = dataset.variable3_y.astype(float)
-    dataset['variable3_y'] = dataset['variable3_y'].fillna((dataset['variable3_y'].mean()))
+    df['variable3_y'] = df.variable3_y.astype(float)
+    df['variable3_y'] = df['variable3_y'].fillna((df['variable3_y'].mean()))
 
-    dataset['variable8_y'] = dataset.variable8_y.astype(float)
-    dataset['variable8_y'] = dataset['variable8_y'].fillna((dataset['variable8_y'].mean()))
+    df['variable8_y'] = df.variable8_y.astype(float)
+    df['variable8_y'] = df['variable8_y'].fillna((df['variable8_y'].mean()))
 
     # Count NANs in each column
-    # count_nan = len(dataset) - dataset.count()
+    # count_nan = len(df) - df.count()
     # print(count_nan)
 
-    return dataset
+    return df
 
 
 dataset = load_dataset()
-dataset = clean_dataset(dataset)
+dataset = clean_dataframe(dataset)
 
 # Display the Data
 pandas.set_option('display.expand_frame_repr', False)
-view_dataset(dataset, 1)
+view_dataframe(dataset, 1)
 
 # print(dataset['variable4'].unique())
 # print(dataset['variable2.x'].value_counts())
