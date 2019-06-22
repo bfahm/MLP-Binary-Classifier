@@ -1,5 +1,11 @@
 # Binary Classification Problem
 
+### Project Dependencies:
+
+- Python 3.7
+- Pandas
+- SKLearn
+
 *Given a training data of about 3900 examples (training and validation), it is required to clean the data, and create a model that classifies the validation data correctly.*
 
 ## Thoughts and observations
@@ -25,7 +31,7 @@ Finally, I normalized the dataset becuase it had values from different scales.
 **Second: Creating The Model** - `main.py`
 
 - This part was easier and took much less time comparing to the first part.
-- I started of with a simple Logestic Regression but it did not get me anywhere, so I opted for a Neural Net using `MLPClassifier`
+- I started of with a simple Logestic Regression Classifier but it did not get me anywhere, so I opted for a Neural Net using `MLPClassifier`
 - Arbitrarily, I chose the default model with an architecture of four layers, three of them having 5 units and the last one had 2. Later on I tuned this but got no where better so I got back to my initial settings.
 - My model was overfitting the dataset due to the large number of features compared to the amount of given data, so I tried to select the features, but having over 50 feature (after extracting dummies) with no clue what each feature represent, I randomly chose features and by try and error I selected the set with the highest accuracy - ~86%
 	- *All random chosen features were saved in a text file named `accuracies_for_different_set_of_features.txt`*
